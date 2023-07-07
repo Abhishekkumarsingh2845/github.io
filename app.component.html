@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+  <title>Abhishek Kumar Singh - Portfolio</title>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: olive;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  background-color: olive;
+  word-spacing: 20px;
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+ 
+
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+.hero-section {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 50px 0;
+  background-color: olive;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.about-section {
+  text-align: start;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills-section {
+  background-color:olive;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.skills-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-container li {
+  margin-bottom: 10px;
+}
+
+.skills-container .skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.skills-container .skill-item .skill-name {
+  font-weight: bold;
+}
+
+.skills-container .skill-item .skill-level {
+  color: #888;
+}
+
+.education-section {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 50px 0;
+  background-color: olive;
+}
+
+.education-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.education-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.education-box {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-section {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 50px 0;
+  background-color: olive;
+}
+
+.contact-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  background-color: olive;
+}
+
+.profile-photo {
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Added CSS */
+section {
+  scroll-margin-top: 100px;
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Portfolio</a></li> <!-- Modified link -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Abhishek Kumar Singh</h1>
+        <h2>Frontend Developer</h2>
+      </div>
+      <img class="profile-photo" src="../assets/IMG_20230612_120543401 (2).jpg" alt="Abhishek Kumar Singh">
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a frontend developer with expertise in React Native, React.js, HTML, CSS, Bootstrap, and Firebase. With my comprehensive skill set, I can create dynamic and visually appealing user interfaces for web and mobile applications while harnessing the power of Firebase for seamless data management, authentication, and real-time functionality.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-item">
+          <span class="skill-name">React Native</span>
+          <span class="skill-level">Intermediate</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">React.js</span>
+          <span class="skill-level">Intermediate</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">HTML</span>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">CSS</span>
+          <span class="skill-level">Advanced</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Bootstrap</span>
+          <span class="skill-level">Intermediate</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Firebase</span>
+          <span class="skill-level">Beginner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education-section">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-container">
+        <div class="education-box">
+          <h3>Graduation</h3>
+          <p>Btech, CSE</p>
+          <p>A.K.Technical University</p>
+          <p>2023</p>
+        </div>
+        <div class="education-box">
+          <h3>12th</h3>
+          <p>Bhavan Kesari Devi Konaria Divya Mandir</p>
+          <p>2019</p>
+        </div>
+        <div class="education-box">
+          <h3>10th</h3>
+          <p>David Charles Lewis Memorial School</p>
+          <p>2017</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-form">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Email: singhrnq231217@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/abhishek-kr-singh-2b470322a/">LinkedIn</a></p>
+    <p>GitHub: <a href="https://github.com/Abhishekkumarsingh2845">GitHub</a></p>
+  </footer>
+  <script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCcJCtkbEnSyA-Nf0mRz2OIQRS9y5bgnEs",
+  authDomain: "abhi-f8fd8.firebaseapp.com",
+  projectId: "abhi-f8fd8",
+  storageBucket: "abhi-f8fd8.appspot.com",
+  messagingSenderId: "643477215874",
+  appId: "1:643477215874:web:a413b6a46e0363bfe1f29b"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+  </script>
+</body>
+</html>
